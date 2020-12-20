@@ -1,0 +1,241 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <style type="text/css">
+    .pz{
+        height:80px;
+        width:1200px;
+        margin:auto;
+        position: relative;
+    } 
+    .pz1{
+        position: absolute;
+        right: 0px;
+        width:800px; 
+        height:80px;
+        margin:0px; 
+        top:0px;
+    }
+    .pz2{
+        float:left;
+        width:160px; 
+        height:80px;
+        display: inline; 
+        line-height: 60px;
+        text-align: center; 
+    }
+    a{
+        text-decoration:none;
+        color:black; 
+    }
+    .pz2:hover{
+        color:#FFAA00; 
+        border-bottom: 3px solid #FF8800;
+    }
+    .z3{
+        background-color: #000;
+        line-height: 120px;
+        height:120px;
+        text-align: center;
+        color: white;
+        padding: 0px;
+        margin-top:-64px;
+    }
+    span{
+        font-size:28px;
+    }
+    .pz7{
+        width:398px;
+        height:555px;
+        position:relative;
+        float:left; 
+    }
+    .z4{
+        width: 398px;
+        height: 73px;
+        background-color: black;
+        opacity: 0.4;
+        position: absolute;
+        left: 0px;
+        line-height: 73px;
+        float: left;
+        bottom:0px;
+        color: white;
+    }
+    .top{
+        width:800px; 
+        height:400px;
+    }
+    p{
+        font-size: 30px;
+        font-weight: bolder;
+    }
+    .left{
+        list-style-type:none;
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom:120px;
+        margin-left:300px;
+    }
+    .right{
+    	margin-right:0px;
+    	float:right;
+    }
+    .picture{
+    	float:left;
+    }
+    #center{
+    	position: relative;
+        left:200px;
+        bottom:350px;
+        }
+    #text{
+        height:50px;
+        width:250px; 
+        border-color:#DDDDDD;
+        border-width: 1px;
+    }
+    #password{
+        height:50px;
+        width:250px; 
+        border-color:#DDDDDD;
+        border-width: 1px;
+    }
+    #button{
+        height:50px;
+        width:250px; 
+        color:white;
+        background-color:#5599FF;
+        border-color:#DDDDDD;
+        border-width: 1px;
+    }
+    p{
+        font-size:11px;
+        opacity:0;
+        color:#DDDDDD;
+    }
+    .print{
+        color: red;
+        margin-top: 45px;
+    }
+    #time{
+        position: relative;
+        left:490px;
+        bottom:250px;
+        font-style:bold;
+        font-size:18px;
+    }
+    </style>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+    <div class="pz">
+    <img src="logotc.png">
+    <ul class="pz1">
+        <li class="pz2"><a href="" >首页</a></li>
+        <li class="pz2"><a href="" >热门路线</a></li>
+        <li class="pz2"><a href="" >签证推荐</a></li>
+        <li class="pz2"><a href="" >酒店预订</a></li>
+        <li class="pz2"><a href="" >使命愿景</a></li>
+    </ul>
+    </div>
+    <div class="right"><img src="1.png"></div>
+    <div class="picture"><img src="5.png"></div>
+    <div class="top">
+        <ul class="lefts">
+            <li class="left" id="left1" style="color:black;" onmouseover=" changecolor1()" onmouseout="reverse1()" onclick="hold()">注册</li>
+            <li class="left" id="left2" style="color:black;" onmouseover=" changecolor2()" onmouseout="reverse2()">酒店</li>
+            <li class="left" id="left3" style="color:black;" onmouseover=" changecolor3()" onmouseout="reverse3()">景点</li>
+        </ul>
+    </div>
+    <div id="center" style="opacity:0">
+ 	<form>
+ 	<input type="text" id="text" value="用户名:" onmousedown="showone()" onblur="showtwo()"/>
+ 	</form>
+ 	<p style="opacity:0;" id="one">支持中文数字</p>
+
+ 	<form>
+ 	<input type="text" id="password" value="设置密码:" onblur="showfour()" onmousedown="showthree()"/>
+ 	</form>
+ 	<p style="opacity:0;" id="three">建议使用两种字符组合</p>
+ 
+ 	<input type="button" id="button" value="立即注册" onclick="questions()" />
+ 	</div>
+    <div id="time" class="seconds" style="opacity:0">注册成功，网页将在<input style="opacity:0" type="button" id="btn" value="" /> s后跳转</div>
+    <div class="z3">
+       苏ICP备000、2014-2017版权所有
+    </div>
+    <script type="text/javascript">
+    	function changecolor1(){
+        	var x=document.getElementById("left1");  
+        	x.getAttributeNode("style").value="color:#E63F00;"
+    	}
+    	function reverse1(){
+        	var y=document.getElementById("left1");  
+       		y.getAttributeNode("style").value="color:black;"
+    	}
+    	function changecolor2(){
+        	var x=document.getElementById("left2");  
+        	x.getAttributeNode("style").value="color:#E63F00;"
+    	}
+   		function reverse2(){
+        	var y=document.getElementById("left2");  
+        	y.getAttributeNode("style").value="color:black;"
+    	}
+   		function changecolor3(){
+        	var x=document.getElementById("left3");  
+        	x.getAttributeNode("style").value="color:#E63F00;"
+    	}
+    	function reverse3(){
+        	var y=document.getElementById("left3");  
+        	y.getAttributeNode("style").value="color:black;"
+    	}
+    	function showone(){
+    		var x=document.getElementById("one");  
+    		x.getAttributeNode("style").value="opacity:1";
+ 		}
+		function showtwo(){
+			var item=document.getElementById("one");
+			var oldtxtnode = item.childNodes[0];
+			item.replaceChild( txtnode , oldtxtnode );
+		}
+			var txtnode=document.createTextNode("用户名不能为空");
+			var item=document.getElementById("one");
+		function showthree(){
+    		var pz=document.createTextNode("1");
+   			item.replaceChild( pz , txtnode );
+    		item.getAttributeNode("style").value="opacity:0";
+    		var b=document.getElementById("three");  
+    		b.getAttributeNode("style").value="opacity:1";
+ 		}
+		function showfour(){
+			var items=document.getElementById("three");
+			var oldtxtnodes = items.childNodes[0];
+			items.replaceChild( txtnodes , oldtxtnodes );
+		}
+			var items=document.getElementById("three");
+			var txtnodes=document.createTextNode("密码不能为空");
+		function hold(){
+        	var cha=document.getElementById("center");  
+        	cha.getAttributeNode("style").value="opacity:1"
+		}
+        var a = 3;
+        var t;
+        function questions(){
+            var q=document.getElementById("btn");  
+            q.getAttributeNode("style").value="opacity:1"
+            var q=document.getElementById("time");  
+            q.getAttributeNode("style").value="opacity:1"
+            if(a>-1){
+            document.getElementById("btn").value = a;
+            a=a-1;
+            t=setTimeout("questions()",1000);
+            if(a<0){
+            window.location.href="https://www.ly.com/?refid=4140683";
+            }
+        }
+    }
+    </script>
+</body>
+</html>
